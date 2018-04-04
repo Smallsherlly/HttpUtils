@@ -29,6 +29,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:23.2.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.huangdali:myhttputils:2.1.6'
-//    compile project(path: ':myhttputils')
+    compile 'com.huangdali:myhttputils:2.1.5'
+    //compile project(path: ':myhttputils')
 }

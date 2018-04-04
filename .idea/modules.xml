@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyHttpUtilsSimplie.iml" filepath="$PROJECT_DIR$/MyHttpUtilsSimplie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyHttpUtils.iml" filepath="$PROJECT_DIR$/MyHttpUtils.iml" />
+      <module fileurl="file://D:\AndroidProjects\MyHttpUtils\MyHttpUtilsSimplie.iml" filepath="D:\AndroidProjects\MyHttpUtils\MyHttpUtilsSimplie.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/myhttputils/myhttputils.iml" filepath="$PROJECT_DIR$/myhttputils/myhttputils.iml" />
     </modules>

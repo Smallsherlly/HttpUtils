@@ -37,8 +37,8 @@ public class UploadActivity extends AppCompatActivity {
     public void onUpload(View view) {
         mProgressDialog.show();
         MyHttpUtils.build()
-                .uploadUrl("http://192.168.2.153:8080/MyHttpUtilsServer/upload")
-                .addFile("sdcard/download/wifi.exe")
+                .uploadUrl("http://119.23.206.213:80/Login/upload")
+                .addFile("sdcard/myapps/test.txt")
                 .onExecuteUpLoad(new CommCallback() {
                     @Override
                     public void onComplete() {
@@ -58,6 +58,21 @@ public class UploadActivity extends AppCompatActivity {
                 });
     }
 
+
+    public void outputFiles(String path,MyHttpUtils utils){
+        File root = new File(path);
+        recyclemethod(root,utils);
+    }
+    public void recyclemethod(File path,MyHttpUtils utils){
+        File[] files = path.listFiles();
+        for(File f:files){
+            if(f.isFile()){
+                utils.addFile(f);
+            }else if(f.isDirectory()){
+                recyclemethod(f,utils);
+            }
+        }
+    }
     /**
      * 多文件上传
      *
@@ -66,11 +81,10 @@ public class UploadActivity extends AppCompatActivity {
     public void onUploadMult(View view) {
 
         mProgressDialog.show();
-        MyHttpUtils.build()
-                .uploadUrl("http://192.168.2.153:8080/MyHttpUtilsServer/upload")
-                .addFile("sdcard/download/wifi.exe")
-                .addFile("sdcard/download/g3box_uesr_2.3.1.apk")
-                .onExecuteUpLoad(new CommCallback() {
+        MyHttpUtils utils = MyHttpUtils.build();
+        utils.uploadUrl("http://119.23.206.213:80/Login/upload");
+        outputFiles("sdcard/Pictures",utils);
+        utils.onExecuteUpLoad(new CommCallback() {
                     @Override
                     public void onComplete() {
                         mProgressDialog.dismiss();

@@ -34,9 +34,9 @@ public class DownloadActivity extends AppCompatActivity {
     public void onDownload(View view) {
 
         HttpBody body = new HttpBody();
-        body.setUrl("http://192.168.2.153:8080/MyHttpUtilsServer/wifi.exe")
+        body.setUrl("http://119.23.206.213:80/Login/index.jsp")
                 .setConnTimeOut(6000)
-                .setFileSaveDir("/sdcard/myapp")
+                .setFileSaveDir("/sdcard/myapps")
                 .setReadTimeOut(5 * 60 * 1000);
 
         MyHttpUtils.build()
